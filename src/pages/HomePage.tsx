@@ -1,7 +1,11 @@
+import SugestedCities from "../components/SugestedCities";
+import SelectedCity from "../components/SelectedCity";
+
 export default function HomePage() {
   return (
     <>
-      <h1>Home Page</h1>
+      <SugestedCities />
+      <SelectedCity />
     </>
   );
 }
