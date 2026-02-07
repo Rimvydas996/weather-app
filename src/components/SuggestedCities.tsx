@@ -1,0 +1,23 @@
+import type CityInterface from "../types/models/CityInterface";
+
+interface SuggestedCitiesProps {
+  onSelectCity: (city: CityInterface) => void;
+}
+
+const suggested: CityInterface[] = [
+  { name: "Vilnius", latitude: 54.6872, longitude: 25.2797, country: "LT" },
+  { name: "Kaunas", latitude: 54.8985, longitude: 23.9036, country: "LT" },
+  { name: "Klaipėda", latitude: 55.7033, longitude: 21.1443, country: "LT" },
+];
+
+export default function SuggestedCities({ onSelectCity }: SuggestedCitiesProps) {
+  return (
+    <div className="suggested-cities">
+      {suggested.map((city) => (
+        <div key={city.name} onClick={() => onSelectCity(city)}>
+          {city.name}
+        </div>
+      ))}
+    </div>
+  );
+}
