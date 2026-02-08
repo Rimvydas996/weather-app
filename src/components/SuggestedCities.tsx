@@ -11,6 +11,14 @@ const suggested: CityInterface[] = [
 ];
 
 export default function SuggestedCities({ onSelectCity }: SuggestedCitiesProps) {
+  const addToLocalStorage = () => {
+    const data = localStorage.getItem("MostViewed");
+
+    if (!data) {
+      localStorage.setItem("MostViewed", JSON.stringify(suggested));
+    }
+  };
+  addToLocalStorage();
   return (
     <div className="suggested-cities">
       {suggested.map((city) => (
