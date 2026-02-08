@@ -28,6 +28,7 @@ export default function SearchBar({ query, setQuery, onSelectCity }: SearchBarPr
   return (
     <div>
       <input
+        className="input-group"
         id="city-search"
         name="city"
         type="text"
@@ -36,9 +37,13 @@ export default function SearchBar({ query, setQuery, onSelectCity }: SearchBarPr
         onChange={(e) => setQuery(e.target.value)}
       />
 
-      <ul>
+      <ul className="list-group">
         {cities.map((city) => (
-          <li key={`${city.latitude}-${city.longitude}`} onClick={() => onSelectCity(city)}>
+          <li
+            className="list-group-item list-group-item-action"
+            key={`${city.latitude}-${city.longitude}`}
+            onClick={() => onSelectCity(city)}
+          >
             {city.name}, {city.country}
           </li>
         ))}

@@ -7,11 +7,12 @@ TODO: Add usage examples when new features are introduced
 
 ```
 weather-app/
-├──src/
-|   ├──components   # React components
-|   ├──pages        # Page components
-|   └──services/    # API and other services
-|       └──api/
-├──public/
-├──documentation/
+├── src/
+│   ├── api/          # API services (HTTP requests, data fetching)
+│   ├── components/   # Reusable UI components
+│   ├── pages/        # Page-level components (routes)
+│   ├── styles/       # Global and component styles
+│   └── types/        # TypeScript types and interfaces
+├── documentation/    # Project documentation
+└── README.md
 ```

@@ -1,8 +1,3 @@
-<!--
-TODO: Update project-docs.md with the latest changes
-TODO: Add usage examples when new features are introduced
--->
-
 # Weather app
 
 ## Project Overview

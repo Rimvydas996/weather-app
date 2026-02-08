@@ -9,8 +9,29 @@ body {
 }
 
 .home-page {
-  width: 50vw;
-  height: 50vh;
   margin: auto;
-  background-color: aquamarine;
+  background-color: rgb(55, 70, 65);
+}
+li:hover {
+  user-select: none;
+  cursor: pointer;
+}
+
+.display-expanded {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.forecast-card {
+  min-width: 155px;
+  max-width: 220px;
+  flex: 1 1 155px;
+}
+
+@media (min-width: 768px) {
+  .display-expanded {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }

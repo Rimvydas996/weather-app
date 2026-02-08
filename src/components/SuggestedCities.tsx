@@ -20,9 +20,9 @@ export default function SuggestedCities({ onSelectCity }: SuggestedCitiesProps) 
   };
   addToLocalStorage();
   return (
-    <div className="suggested-cities">
+    <div className="btn-group-lg" role="group">
       {suggested.map((city) => (
-        <div key={city.name} onClick={() => onSelectCity(city)}>
+        <div className="btn btn-primary m-2" key={city.name} onClick={() => onSelectCity(city)}>
           {city.name}
         </div>
       ))}
